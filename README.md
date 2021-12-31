@@ -1,27 +1,24 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+LINUX:
+Step 0: Clone repository https://github.com/Enzine/cybermooc2021.git.
+Step 1: Install Ruby.
+Step 2: $ bundle install
+Step 3: $ rails s
 
-Things you may want to cover:
+MAC:
+Step 0: Clone repository https://github.com/Enzine/cybermooc2021.git.
+Step 1: Install Ruby.
+Step 2: $ bundle install
+Step 3: $ rails s
 
-* Ruby version
+WINDOWS:
+Step -1: Install Git Bash.
+Step 0: Clone repository https://github.com/Enzine/cybermooc2021.git.
+Step 1: Install Ruby.
+Step 2: $ bundle install
+Step 3: $ rails s
 
-* System dependencies
+(OWASP 2021)
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-$ rails s
+`$ rails s`
