@@ -20,6 +20,10 @@
         <%= link_to 'Your notes', notes_path %> |
         <%= link_to 'Your page', current_user %> | <%= current_user.username %> signed in <%= link_to 'logout', logout_path, method: :delete %>
       <% end %>
+      <%= form_tag(users_path, method: :get) do %>
+        <%= text_field_tag :username, params[:username], autocomplete: 'off', placeholder: "username" %>
+        <%= submit_tag "Search" %>
+      <% end %>
     </div>
 
     <%= yield %>

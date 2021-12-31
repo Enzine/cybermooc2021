@@ -3,8 +3,13 @@ class UsersController < ApplicationController
 
   # GET /users or /users.json
   def index
-    @users = User.all
-  end
+    if params[:username]
+      @users = User.where("username like '#{params[:username]}'")
+      # @users = User.where({ username: params[:username] })
+    else
+      @users = User.all.order(created_at: :desc)
+    end
+  end 
 
   # GET /users/1 or /users/1.json
   def show

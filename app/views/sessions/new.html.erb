@@ -1,7 +1,8 @@
 <h1>Log in</h1>
 
 <%= form_tag session_path do %>
-  <%= text_field_tag :username, params[:username] %>
+  Username: <%= text_field_tag :username, params[:username] %><br /><br />
+  Password: <%= text_field_tag :password, params[:password] %><br /><br />
   <%= submit_tag "Log in" %>
 <% end %>
 
