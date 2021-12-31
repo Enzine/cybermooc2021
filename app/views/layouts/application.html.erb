@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Reviewapp</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <div class="navibar">
+      <% if not current_user %>
+      <%= link_to 'register', register_path %>
+        <%= link_to 'login', signin_path %>
+      <% end %>
+      <% if current_user %>
+        <%= link_to 'Your notes', notes_path %> |
+        <%= link_to 'Your page', current_user %> | <%= current_user.username %> signed in <%= link_to 'logout', logout_path, method: :delete %>
+      <% end %>
+    </div>
+
+    <%= yield %>
+  </body>
+</html>
